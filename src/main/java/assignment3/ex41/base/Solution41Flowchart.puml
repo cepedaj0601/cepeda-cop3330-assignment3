@@ -1,27 +1,40 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+class Sorter
+enum InputTxt
+enum OutputTxt
+class Converters
+interface ScanInputAndConvert
+interface ConvertAndOutput
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+InputTxt --> ScanInputAndConvert
+ScanInputAndConvert --> AlphabeticalSorter
+AlphabeticalSorter --> ConvertAndOutput
+ConvertAndOutput --> OutputTxt
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
+Converters --* ConvertAndOutput
+Converters --* ScanInputAndConvert
+Sorter --* AlphabeticalSorter
 
-class ArrayList {
-Object[] elementData
-size()
+class Sorter{
+-AlphabeticalSorter
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class AlphabeticalSorter
+
+class Converters {
+-ScanInputAndConvert()
+-ConvertAndOutput()
 }
 
+enum InputTxt {
+-names in default order
+-number of names
+}
+
+enum OutputTxt {
+-names alphabetically sorted
+-number of names
+}
 @enduml

@@ -45,6 +45,10 @@ public class Solution41 {
     private static final Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
+        // call function to convert input file to data type
 
+        // call sorting function
+
+        //call output function
     }
 }
