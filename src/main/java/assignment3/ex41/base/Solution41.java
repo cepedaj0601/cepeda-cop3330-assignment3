@@ -38,17 +38,25 @@ file.
 Use the program to sort data from a large data set (e.g. census data) and use a profiler to analyze its performance.
  */
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 public class Solution41 {
 
     private static final Scanner in = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // call function to convert input file to data type
+        ArrayList<String> inputNames = new ArrayList<>();
+        inputNames = Converters.ScanInputAndConvert();
 
         // call sorting function
+        Sorter.alphabeticalSorter(inputNames);
 
         //call output function
+        Converters.ConvertAndOutput(inputNames);
     }
 }
