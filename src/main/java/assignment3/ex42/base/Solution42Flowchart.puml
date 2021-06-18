@@ -1,27 +1,36 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+class Table
+enum inputTxt
+class Converters
+interface readToArray
+interface tableSpacer
+interface tableMaker
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+inputTxt --> readToArray
+readToArray --> tableMaker
+tableSpacer --> tableMaker
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
+Table --* tableSpacer
+Table --* tableMaker
+Converters --* readToArray
 
-class ArrayList {
-Object[] elementData
-size()
+class Table{
+-tableMaker
+-tableSpacer
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class Converters{
+-readToArray
 }
+
+
+enum inputTxt {
+-first name
+-last name
+-salary
+}
+
 
 @enduml

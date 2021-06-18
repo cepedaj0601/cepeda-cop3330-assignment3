@@ -54,9 +54,10 @@ public class Solution41 {
         inputNames = Converters.ScanInputAndConvert();
 
         // call sorting function
-        Sorter.alphabeticalSorter(inputNames);
+        ArrayList<String> outputNames = new ArrayList<>();
+        outputNames = Sorter.alphabeticalSorter(inputNames);
 
         //call output function
-        Converters.ConvertAndOutput(inputNames);
+        Converters.ConvertAndOutput(outputNames);
     }
 }

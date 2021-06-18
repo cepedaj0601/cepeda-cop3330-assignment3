@@ -43,5 +43,15 @@ public class Solution42 {
 
     public static void main(String[] args) {
 
+        //take in input
+        //convert txt to data type using
+        Converters.readToArray();
+
+        //making the table
+        //space out each name correctly
+        Table.tableSpacer();
+
+        //print out the table
+        Table.tableMaker();
     }
 }

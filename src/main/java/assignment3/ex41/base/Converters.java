@@ -30,18 +30,21 @@ public class Converters {
     }
 
     //output converter function
-    public static void /*ArrayList<String>*/ ConvertAndOutput (ArrayList<String> inputNames) throws IOException {
+    public static void ConvertAndOutput (ArrayList<String> outputNames) throws IOException {
         //take in sorted array
-        //use java function to output the array as a text file
-
 /*
-        FileWriter writer = new FileWriter("\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" +
-                "exercise41_output.txt");
-        writer.write(outputNames);
-        writer.close();
-
+        for (int i = 0; i < outputNames.size(); i++) {
+            outputNames.set(i, outputNames.get(i) + "\n");
+       }
 
  */
+
+        //use java function to output the array as a text file
+        FileWriter writer = new FileWriter("\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" +
+                "exercise41_output.txt");
+        writer.write(String.valueOf(outputNames));
+        writer.close();
+
     }
 
 }
