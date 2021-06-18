@@ -39,6 +39,8 @@ public class Solution45 {
     private static final Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
-
+        //take & convert input file
+        //replace word
+        //convert & create output file
     }
 }
