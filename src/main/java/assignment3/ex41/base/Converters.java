@@ -1,10 +1,6 @@
 package assignment3.ex41.base;
 
 import java.io.*;
-import java.nio.file.DirectoryStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -32,12 +28,6 @@ public class Converters {
     //output converter function
     public static void ConvertAndOutput (ArrayList<String> outputNames) throws IOException {
         //take in sorted array
-/*
-        for (int i = 0; i < outputNames.size(); i++) {
-            outputNames.set(i, outputNames.get(i) + "\n");
-       }
-
- */
 
         //use java function to output the array as a text file
         FileWriter writer = new FileWriter("\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" +

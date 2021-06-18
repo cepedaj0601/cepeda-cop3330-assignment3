@@ -1,27 +1,44 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
+class Replacer
+class Convert
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
+interface wordReplacer
+interface convertInput
+interface convertOutput
 
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
+enum inputTxt
+enum outputTxt
+enum fileName
 
-class ArrayList {
-Object[] elementData
-size()
+class Replacer{
+-wordReplacer
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+class Convert {
+-covertInput
+-convertOutput
 }
+
+enum inputTxt{
+-default statement
+}
+
+enum outputTxt{
+-modified statement
+}
+
+inputTxt --> convertInput
+convertInput --> wordReplacer
+wordReplacer --> outputTxt
+
+fileName *-- wordReplacer
+
+wordReplacer *-- Replacer
+
+convertOutput *-- Convert
+convertInput *-- Convert
+
 
 @enduml

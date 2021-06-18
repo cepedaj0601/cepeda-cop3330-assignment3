@@ -1,10 +1,7 @@
 package assignment3.ex41.base;
 
-import javax.naming.Name;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.stream.Collectors;
 
 // class will contain function that alphabetically sorts the names converted from the input converter function, and
 // output the names to the output converter function
