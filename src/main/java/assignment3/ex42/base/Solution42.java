@@ -35,23 +35,25 @@ Sort the results by salary from highest to lowest.
 Rework your program to use a CSV parsing library and compare the results.
  */
 
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Solution42 {
 
     private static final Scanner in = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
         //take in input
-        //convert txt to data type using
-        Converters.readToArray();
+        //convert txt to data type
+        ArrayList<String> inputData = Converters.readToArray();
 
         //making the table
         //space out each name correctly
-        Table.tableSpacer();
+        ArrayList<Integer> spaces = Table.tableSpacer(inputData);
 
         //print out the table
-        Table.tableMaker();
+        ArrayList<String> output = Table.tableMaker(inputData, spaces);
     }
 }
