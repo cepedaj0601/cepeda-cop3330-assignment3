@@ -33,15 +33,23 @@ your algorithm so that it performs the word counting as fast as possible.
 Write the program in another language and compare the processing times of the two implementations.
  */
 
+import java.io.FileNotFoundException;
+
 public class Solution46 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         //take input
         //convert input into data type
-        Input.convertInput();
+        String inputTxt = Input.convertInput();
+
+        //find unique words
+        Histogram.wordFinder(inputTxt);
 
         //count instances of each word
         Histogram.wordCounter();
+
+        //order frequencies of words
+        Histogram.frequencySorter();
 
         //output word frequencies
         Histogram.frequencyPrinter();

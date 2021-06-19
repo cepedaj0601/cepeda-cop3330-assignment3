@@ -10,15 +10,18 @@ interface convertInput
 convertInput *-- Input
 
 class Histogram{
+-wordFinder
 -wordCounter
 -frequencySorter
 -frequencyPrinter
 }
 
+interface wordFinder
 interface wordCounter
 interface frequencySorter
 interface frequencyPrinter
 
+wordFinder *-- Histogram
 wordCounter *-- Histogram
 frequencySorter *-- Histogram
 frequencyPrinter *-- Histogram
@@ -28,7 +31,8 @@ string of repeating words
 }
 
 inputTxt --> convertInput
-convertInput --> wordCounter
+convertInput --> wordFinder
+wordFinder --> wordCounter
 wordCounter --> frequencySorter
 frequencySorter --> frequencyPrinter
 
