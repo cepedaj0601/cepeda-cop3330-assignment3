@@ -34,14 +34,14 @@ public class Converter {
         //take in new string
 
         //prompt for output file name
-        System.out.println("Enter a name to be used for the new file:");
-        String fileName = in.next();
+     //   System.out.println("Enter a name to be used for the new file:");
+       // String fileName = in.next();
 
         //convert the string to new txt file
-        FileWriter writer = new FileWriter("\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" + fileName + ".txt");
+        FileWriter writer = new FileWriter("\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" + /*fileName +*/ ".txt");
         writer.write(inputPhrase);
         writer.close();
 
-        return "\\\\Users\\\\stick\\\\Desktop\\\\COP 3330\\\\Assignments\\\\\" + fileName + \".txt";
+        return "\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" + /*fileName +*/ ".txt";
     }
 }
