@@ -45,10 +45,9 @@ public class Histogram {
         //sort numbers in descending order
         //copy new list to new array
         order = Arrays.stream(frequencyCounter).sorted();
-        int[] orderArray = order.toArray();
 
         //return new arraylist
-        return orderArray;
+        return order.toArray();
     }
 
     //function to print out the resulting histogram
