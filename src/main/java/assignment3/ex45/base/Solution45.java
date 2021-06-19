@@ -32,15 +32,18 @@ Create a configuration file that maps “bad” words to “good” words and us
 Modify the program so it can handle every file a folder of files instead of a single file.
  */
 
-import java.util.Scanner;
+import java.io.IOException;
 
 public class Solution45 {
 
-    private static final Scanner in = new Scanner(System.in);
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //take & convert input file
+        String inputPhrase = Converter.convertInput();
+
         //replace word
+        inputPhrase = Replacer.wordReplacer(inputPhrase);
+        
         //convert & create output file
+        String output = Converter.convertOutput(inputPhrase);
     }
 }
