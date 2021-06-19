@@ -80,8 +80,6 @@ public class Histogram {
             output.append("\n");
         }
 
-        System.out.println(output.toString());
-
         //return results in a string for testing
         return output.toString();
     }
