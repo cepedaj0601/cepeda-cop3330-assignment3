@@ -28,11 +28,26 @@ public class Converters {
     //output converter function
     public static void ConvertAndOutput (ArrayList<String> outputNames) throws IOException {
         //take in sorted array
+        int first = 1;
+        String OutputNames = "";
+        String temp = outputNames.toString();
+        for (int i = 0; i < temp.length(); i++) {
+            if (temp.charAt(i) == '\n') {
+                first = 1;
+            }
+            if (temp.charAt(i) == ',' || temp.charAt(i+1) == ' '){
+                if (first == 1) {
+                    OutputNames = OutputNames + temp.charAt(i);
+                    first = 0;
+               }
+            }
+        }
+        System.out.println(OutputNames);
 
         //use java function to output the array as a text file
         FileWriter writer = new FileWriter("\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" +
                 "exercise41_output.txt");
-        writer.write(String.valueOf(outputNames));
+        writer.write(OutputNames);
         writer.close();
 
     }
