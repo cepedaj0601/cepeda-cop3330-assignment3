@@ -42,16 +42,13 @@ public class Solution46 {
         //convert input into data type
         String inputTxt = Input.convertInput();
 
-        //find unique words
-        Histogram.wordFinder(inputTxt);
-
         //count instances of each word
-        Histogram.wordCounter();
+        int[] frequencyCounter = Histogram.wordCounter(inputTxt);
 
         //order frequencies of words
-        Histogram.frequencySorter();
+        int[] orderArray = Histogram.frequencySorter(frequencyCounter);
 
         //output word frequencies
-        Histogram.frequencyPrinter();
+        Histogram.frequencyPrinter(orderArray, frequencyCounter);
     }
 }

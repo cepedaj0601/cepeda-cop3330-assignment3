@@ -19,7 +19,7 @@ public class Input {
         while (scanner.hasNextLine()) {
             inputTxt = inputTxt.concat(scanner.nextLine() + "\n");
         }
-        System.out.println(inputTxt);
+
         //return string
         return inputTxt;
     }
