@@ -1,27 +1,35 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
-
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+class Input{
+-convertInput
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+interface convertInput
+
+convertInput *-- Input
+
+class Histogram{
+-wordCounter
+-frequencySorter
+-frequencyPrinter
 }
+
+interface wordCounter
+interface frequencySorter
+interface frequencyPrinter
+
+wordCounter *-- Histogram
+frequencySorter *-- Histogram
+frequencyPrinter *-- Histogram
+
+enum inputTxt{
+string of repeating words
+}
+
+inputTxt --> convertInput
+convertInput --> wordCounter
+wordCounter --> frequencySorter
+frequencySorter --> frequencyPrinter
 
 @enduml
