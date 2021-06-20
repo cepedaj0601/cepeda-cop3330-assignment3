@@ -1,4 +1,4 @@
-package assignment3.ex44.base;
+package assignment3.base;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -8,7 +8,7 @@ import java.io.FileReader;
 import java.util.Iterator;
 
 //contains functions used to display the corresponding information of the product
-public class Info {
+public class Info_2 {
 
     //converts inout file to data type
     public static String[] getInfo()  {

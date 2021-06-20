@@ -10,7 +10,7 @@ public class Sorter {
     //names sorter function
     public static ArrayList<String> alphabeticalSorter (ArrayList<String> inputNames){
         //read in names
-        ArrayList<String> Names = new ArrayList<>();
+        ArrayList<String> names = new ArrayList<>();
 
         //use sort function to sort the names
         Collections.sort(inputNames);
@@ -21,23 +21,22 @@ public class Sorter {
             if ((inputName.equals("-----------------")) || (inputName.equals("Total of 7 names"))) {
                 continue;
             } else {
-                Names.add(j, inputName);
+                names.add(j, inputName);
                 j++;
             }
         }
 
         //take size of list for the number of names on the list
-        int numNames = Names.size();
-        Names.add(0, "Total of " + numNames + " names");
-        Names.add(1, "-----------------");
+        int numNames = names.size();
+        names.add(0, "Total of " + numNames + " names");
+        names.add(1, "-----------------");
 
-        for (int i = 0; i < Names.size(); i++) {
-            Names.set(i, Names.get(i) + "\n");
+        for (int i = 0; i < names.size(); i++) {
+            names.set(i, names.get(i) + "\n");
+            System.out.println(names.get(i));
         }
 
-            Names.toString();
-
         //return new list
-        return Names;
+        return names;
     }
 }

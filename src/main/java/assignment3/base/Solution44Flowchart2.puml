@@ -1,0 +1,46 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Product{
+-getProduct
+-findProduct
+}
+
+class Info{
+-getInfo
+-printInfo
+}
+
+interface getProduct
+
+interface findProduct
+
+interface getInfo
+
+interface printInfo
+
+enum found{
+if product exists
+}
+
+enum notFound{
+if product does not exist
+}
+
+enum inputTxt{
+-list of product information
+}
+
+getProduct *-- Product
+findProduct *-- Product
+getInfo *-- Info
+printInfo *-- Info
+
+inputTxt --> getInfo
+getInfo --> getProduct
+getProduct --> findProduct
+findProduct --> found
+findProduct --> notFound
+notFound --> getProduct
+found --> printInfo
+@enduml
