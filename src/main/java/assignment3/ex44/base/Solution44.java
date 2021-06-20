@@ -49,11 +49,17 @@ public class Solution44 {
 
     private static final Scanner in = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         //take in file
+        String[] stuff = Info.getInfo();
+
         //prompt input
+        String[] productName = Product.getProduct(stuff);
+
         //check if input exists
-        //locate input
+        Product.findProduct(stuff, productName);
+
         //print output
+        Info.printInfo();
     }
 }
