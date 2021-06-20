@@ -50,6 +50,10 @@ public class Solution44 {
     private static final Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
-
+        //take in file
+        //prompt input
+        //check if input exists
+        //locate input
+        //print output
     }
 }
