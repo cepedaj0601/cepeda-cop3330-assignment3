@@ -1,4 +1,4 @@
-package assignment3.base;
+package assignment3.ex44_secondAttempt.base;
 /*
  *  UCF COP3330 Summer 2021 ex44 Solution
  *  Copyright 2021 Justin Cepeda
@@ -43,14 +43,6 @@ it in the JSON file. Ensure the newly added product is immediately available for
 program.
  */
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Solution44_2 {

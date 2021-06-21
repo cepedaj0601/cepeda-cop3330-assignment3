@@ -15,9 +15,8 @@ public class Html {
         //add javascript
         //add css
 
-        File f = new File("source.htm");
-        BufferedWriter bw = new BufferedWriter(new FileWriter("\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" +
-                "cepeda-cop3330-assignment3\\src\\main\\java\\assignment3\\ex43"));
+        File htmlFile = new File("source.htm");
+        BufferedWriter bw = new BufferedWriter(new FileWriter(htmlFile));
         bw.write("<html><body><h1>Blah, Blah!</h1>");
         bw.write("<textarea cols=75 rows=10>");
         for (int ii=0; ii<20; ii++) {
@@ -27,7 +26,7 @@ public class Html {
         bw.write("</body></html>");
         bw.close();
 
-        Desktop.getDesktop().browse(f.toURI());
+        Desktop.getDesktop().browse(htmlFile.toURI());
         //return output for testing
     }
 }
