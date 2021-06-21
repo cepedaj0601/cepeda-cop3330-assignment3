@@ -15,7 +15,7 @@ public class Html {
         //add javascript
         //add css
 
-        File htmlFile = new File("source.htm");
+        File htmlFile = new File("ex43output.htm");
         BufferedWriter bw = new BufferedWriter(new FileWriter(htmlFile));
         bw.write("<html><body><h1>Blah, Blah!</h1>");
         bw.write("<textarea cols=75 rows=10>");
