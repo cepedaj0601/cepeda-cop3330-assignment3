@@ -31,13 +31,14 @@ Implement this in a scripting language on Windows, OSX, and Linux.
 Implement this as a web application that provides the specified site as a zip file.
  */
 
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Solution43 {
 
     private static final Scanner in = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         //take in name
         InfoGetters.getName();
 
