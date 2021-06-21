@@ -7,14 +7,103 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TableTest {
-/*
-    @Test
-    void tableSpacer() {
-    }
 
     @Test
+    void tableSpacer() {
+        ArrayList<String> input = new ArrayList<>();
+        input.add("Ling,Mai,55900");
+        input.add("Johnson,Jim,56500");
+        input.add("Jones,Aaron,46000");
+        input.add("Jones,Chris,34500");
+        input.add("Swift,Geoffrey,14200");
+        input.add("Xiong,Fong,65000");
+        input.add("Zarnecki,Sabrina,51500");
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(6);
+        numbers.add(7);
+        numbers.add(3);
+        numbers.add(7);
+        numbers.add(5);
+        numbers.add(5);
+        numbers.add(5);
+        numbers.add(5);
+        numbers.add(5);
+        numbers.add(2);
+        numbers.add(5);
+        numbers.add(6);
+        numbers.add(2);
+        numbers.add(3);
+
+        ArrayList<Integer> actual = Table.tableSpacer(input);
+        ArrayList<Integer> expected = numbers;
+    }
+    @Test
+    void tableSpacerShortWords() {
+        ArrayList<String> input = new ArrayList<>();
+        input.add("Lin,Mai,55900");
+        input.add("Joh,Jim,56500");
+        input.add("Jon,Aar,46000");
+        input.add("Jon,Chr,34500");
+        input.add("Swi,Geo,14200");
+        input.add("Xio,Fon,65000");
+        input.add("Zar,Sab,51500");
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(7);
+        numbers.add(7);
+        numbers.add(7);
+        numbers.add(7);
+        numbers.add(7);
+        numbers.add(7);
+        numbers.add(7);
+        numbers.add(7);
+        numbers.add(7);
+        numbers.add(7);
+        numbers.add(7);
+        numbers.add(7);
+        numbers.add(7);
+        numbers.add(7);
+
+        ArrayList<Integer> actual = Table.tableSpacer(input);
+        ArrayList<Integer> expected = numbers;
+        assertEquals(expected, actual);
+    }
+    @Test
+    void tableSpacerLongWords() {
+        ArrayList<String> input = new ArrayList<>();
+        input.add("Lingllll,Mailllll,55900");
+        input.add("Johnsonl,Jimlllll,56500");
+        input.add("Joneslll,Aaronlll,46000");
+        input.add("Joneslll,Chrislll,34500");
+        input.add("Swiftlll,Geoffrey,14200");
+        input.add("Xionglll,Fongllll,65000");
+        input.add("Zarnecki,Sabrinal,51500");
+
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(2);
+        numbers.add(2);
+        numbers.add(2);
+        numbers.add(2);
+        numbers.add(2);
+        numbers.add(2);
+        numbers.add(2);
+        numbers.add(2);
+        numbers.add(2);
+        numbers.add(2);
+        numbers.add(2);
+        numbers.add(2);
+        numbers.add(2);
+        numbers.add(2);
+
+        ArrayList<Integer> actual = Table.tableSpacer(input);
+        ArrayList<Integer> expected = numbers;
+        assertEquals(expected, actual);
+    }
+/*
+    @Test
     void tableMaker() {
-        ArrayList<String> inputData = "Ling,Mai,55900\n" +
+        String inputData = "Ling,Mai,55900\n" +
                 "Johnson,Jim,56500\n" +
                 "Jones,Aaron,46000\n" +
                 "Jones,Chris,34500\n" +
@@ -24,7 +113,7 @@ class TableTest {
 
         String spaces = "6";
 
-        ArrayList<String> actual = Table.tableMaker(inputData, spaces);
+        String actual = Table.tableMaker(inputData, spaces);
         String expected = "[\n" +
                 ", 0, 0, 5, 1, 5,  ,  ,  , a, n, i, r, b, a, S,  ,  , i, k, c, e, n, r, a, Z, \n" +
                 ", 0, 0, 0, 5, 6,  ,  ,  ,  ,  ,  , g, n, o, F,  ,  ,  ,  ,  , g, n, o, i, X, \n" +
@@ -39,5 +128,7 @@ class TableTest {
 
     }
 
+
  */
+
 }
