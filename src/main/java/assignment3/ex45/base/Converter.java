@@ -42,6 +42,6 @@ public class Converter {
         writer.write(inputPhrase);
         writer.close();
 
-        return "\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" + fileName + ".txt";
+        return "\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" + ".txt";
     }
 }

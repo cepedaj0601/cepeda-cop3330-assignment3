@@ -26,7 +26,7 @@ public class Converters {
     }
 
     //output converter function
-    public static void ConvertAndOutput (ArrayList<String> outputNames) throws IOException {
+    public static ArrayList<String> ConvertAndOutput (ArrayList<String> outputNames) throws IOException {
         //take in sorted array
         //use java function to output the array as a text file
         FileWriter writer = new FileWriter("\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" +
@@ -37,7 +37,7 @@ public class Converters {
         }
 
         writer.close();
-
+        return outputNames;
     }
 
 }

@@ -26,7 +26,7 @@ class ConverterTest {
                 One should never use the word "use" in writing. Use "use" instead.
                 For example, "She uses an IDE to write her Java programs" instead of "She
                 uses an IDE to write her Java programs".""");
-        String expected = "\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" + /*fileName +*/ ".txt";
+        String expected = "\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" + ".txt";
         assertEquals(expected, actual);
     }
 
@@ -36,14 +36,14 @@ class ConverterTest {
                 One should never utilize the word "utilize" in writing. Use "use" instead.
                 For example, "She uses an IDE to write her Java programs" instead of "She
                 utilizes an IDE to write her Java programs".""");
-        String expected = "\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" + /*fileName +*/ ".txt";
+        String expected = "\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" + ".txt";
         assertEquals(expected, actual);
     }
 
     @Test
     void OutOneWord() throws IOException {
         String actual = Converter.convertOutput("difo");
-        String expected = "\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" + /*fileName +*/ ".txt";
+        String expected = "\\Users\\stick\\Desktop\\COP 3330\\Assignments\\" + ".txt";
         assertEquals(expected, actual);
     }
 }
