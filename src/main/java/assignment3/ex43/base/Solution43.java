@@ -38,6 +38,19 @@ public class Solution43 {
     private static final Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
+        //take in name
+        InfoGetters.getName();
 
+        //take in author
+        InfoGetters.getAuthor();
+
+        //take in if JavaScript is to be made
+        InfoGetters.getJava();
+
+        //take in if files will be stored in CSS
+        InfoGetters.getCss();
+
+        //generate html file
+        Html.htmlMaker();
     }
 }

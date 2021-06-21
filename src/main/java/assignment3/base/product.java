@@ -5,16 +5,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Scanner;
 
 //contains functions used to find the product
-public class Product_2 {
-    @JsonProperty ("name")
-    private String name;
-
-    @JsonProperty ("price")
-    private double price;
-
-    @JsonProperty("quantity")
-    private int quantity;
-
+public class product {
+        private String name ;
+        private double price ;
+        private int quantity ;
 
     public String getName() {
         return name;

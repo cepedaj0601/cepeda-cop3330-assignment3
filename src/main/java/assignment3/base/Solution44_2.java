@@ -43,25 +43,22 @@ it in the JSON file. Ensure the newly added product is immediately available for
 program.
  */
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Solution44_2 {
 
     private static final Scanner in = new Scanner(System.in);
 
-    public static void main(String[] args){
-        //take in file
-        Product_2 test = new Product_2() ;
-        System.out.println(test.getName());
-        /*String[] stuff = Info.getInfo();
-
-        //prompt input
-        String[] productName = Product.getProduct(stuff);
-
-        //check if input exists
-        Product.findProduct(stuff, productName);
-
-        //print output
-        Info.printInfo();*/
+    public static void main(String[] args) {
+        Info_2 boob = new Info_2() ;
+        boob.getInfo();
     }
 }

@@ -19,7 +19,6 @@ public class Sorter {
         int j = 0;
         for (String inputName : inputNames) {
             if ((inputName.equals("-----------------")) || (inputName.equals("Total of 7 names"))) {
-                continue;
             } else {
                 names.add(j, inputName);
                 j++;

@@ -9,12 +9,12 @@ import java.util.Iterator;
 
 //contains functions used to display the corresponding information of the product
 public class Info_2 {
-
+    private String name ;
     //converts inout file to data type
-    public static String[] getInfo()  {
+    public void getInfo()  {
 
         //create data type
-        String[] stuff = new String[3];
+
 
         //import file
         JSONParser parser = new JSONParser();
@@ -24,20 +24,21 @@ public class Info_2 {
             JSONObject jsonObject = (JSONObject) obj;
             JSONArray products = (JSONArray) jsonObject.get("products");
             Iterator iterator = products.iterator();
-            stuff[0] = (iterator.next().toString());
-            stuff[1] = (iterator.next().toString());
-            stuff[2] = (iterator.next().toString());
+            while (iterator.hasNext()) {
+                this.name = (String) products.get(0);
+                System.out.println(name);
+                iterator.next() ;
+            }
+
+
         }
         catch (Exception e) {
             e.printStackTrace();
         }
 
-        for (int i = 0; i < stuff.length; i++) {
-            System.out.println(stuff[i]);
-        }
 
         //return data type
-        return stuff;
+        //return stuff;
     }
 
     //prints requested information of the product
