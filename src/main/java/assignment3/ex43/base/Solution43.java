@@ -32,26 +32,27 @@ Implement this as a web application that provides the specified site as a zip fi
  */
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Solution43 {
 
     private static final Scanner in = new Scanner(System.in);
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         //take in name
-        InfoGetters.getName();
+        String name = InfoGetters.getName();
 
         //take in author
-        InfoGetters.getAuthor();
+        String author = InfoGetters.getAuthor();
 
         //take in if JavaScript is to be made
-        InfoGetters.getJava();
+        String java = InfoGetters.getJava();
 
         //take in if files will be stored in CSS
-        InfoGetters.getCss();
+        String css = InfoGetters.getCss();
 
         //generate html file
-        Html.htmlMaker();
+        Html.htmlMaker(name, author, java, css);
     }
 }
