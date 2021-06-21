@@ -35,7 +35,7 @@ public class Converters {
         for (String outputName : outputNames) {
             writer.write(outputName);
         }
-
+        System.out.println(outputNames);
         writer.close();
         return outputNames;
     }

@@ -11,7 +11,7 @@ public class Sorter {
     public static ArrayList<String> alphabeticalSorter (ArrayList<String> inputNames){
         //read in names
         ArrayList<String> names = new ArrayList<>();
-
+        System.out.println(inputNames);
         //use sort function to sort the names
         Collections.sort(inputNames);
 
